@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+
+
+
+
+<div class="container">
+    <div id="tabs">
+        <ul class="list-inline">
+            <li data-url="@Url.Action("Who", "Home")" class="ajax-sublink">Who</li>
+            <li data-url="@Url.Action("What", "Home")" class="ajax-sublink">What</li>
+            <li data-url="@Url.Action("Why", "Home")" class="ajax-sublink">Why</li>
+            <li data-url="@Url.Action("How", "Home")" class="ajax-sublink">How</li>
+            <li data-url="@Url.Action("Where", "Home")" class="ajax-sublink">Where</li>
+
+        </ul>
+        <div class="active">@Html.Action("Who", "Home")</div>
+         
+  
+            
+        </div>
+    </div>
+
