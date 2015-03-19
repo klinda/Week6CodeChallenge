@@ -15,4 +15,13 @@
             $('.active').html(data);
         });
     });
+    $('body').on('submit', '.ajax-sublink', function (event) {
+
+        event.preventDefault();
+
+        $.post($(this).data('posturl'), $(this).serialize(), function (data) {
+            $('.contact-content').html(data);
+        });
+    });
+
 });

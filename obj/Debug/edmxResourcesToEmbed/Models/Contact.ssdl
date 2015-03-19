@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="sp6LindaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'sp6Linda.sp6Linda.ContactForm2' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ContactForm2">
+    <Key>
+      <PropertyRef Name="FirstName" />
+      <PropertyRef Name="LastName" />
+      <PropertyRef Name="CompanyName" />
+      <PropertyRef Name="Email" />
+      <PropertyRef Name="PhoneNumber" />
+      <PropertyRef Name="ProjectDescription" />
+      <PropertyRef Name="Comment" />
+    </Key>
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CompanyName" Type="nchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PhoneNumber" Type="nvarchar" MaxLength="14" Nullable="false" />
+    <Property Name="ProjectDescription" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Comment" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="sp6LindaModelStoreContainer">
+    <EntitySet Name="ContactForm2" EntityType="Self.ContactForm2" store:Type="Tables" store:Schema="sp6Linda">
+      <DefiningQuery>SELECT 
+    [ContactForm2].[FirstName] AS [FirstName], 
+    [ContactForm2].[LastName] AS [LastName], 
+    [ContactForm2].[CompanyName] AS [CompanyName], 
+    [ContactForm2].[Email] AS [Email], 
+    [ContactForm2].[PhoneNumber] AS [PhoneNumber], 
+    [ContactForm2].[ProjectDescription] AS [ProjectDescription], 
+    [ContactForm2].[Comment] AS [Comment]
+    FROM [sp6Linda].[ContactForm2] AS [ContactForm2]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>
